@@ -1044,26 +1044,26 @@ void set_static_mode(u8 r, u8 g, u8 b)
     fc_effect.rgb.r = r;
     fc_effect.rgb.g = g;
     fc_effect.rgb.b = b;
-    // fc_effect.rgb.w = 0;
+    fc_effect.rgb.w = 0;
 
     // printf("r = %d, g = %d, b = %d", r, g, b);
 
 #if LED_STRIP_RGBW
 
-    if (fc_effect.rgb.r == 0xFF &&
-        fc_effect.rgb.g == 0xFF &&
-        fc_effect.rgb.b == 0xFF)
-    {
+    // if (fc_effect.rgb.r == 0xFF &&
+    //     fc_effect.rgb.g == 0xFF &&
+    //     fc_effect.rgb.b == 0xFF)
+    // {
 
-        fc_effect.rgb.r = 0;
-        fc_effect.rgb.g = 0;
-        fc_effect.rgb.b = 0;
-        fc_effect.rgb.w = 255;
-    }
-    else
-    {
-        fc_effect.rgb.w = 0;
-    }
+    //     fc_effect.rgb.r = 0;
+    //     fc_effect.rgb.g = 0;
+    //     fc_effect.rgb.b = 0;
+    //     fc_effect.rgb.w = 255;
+    // }
+    // else
+    // {
+    //     fc_effect.rgb.w = 0;
+    // }
 #endif
 
     set_fc_effect(); // 效果调度

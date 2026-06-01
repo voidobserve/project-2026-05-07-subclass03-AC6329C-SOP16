@@ -2277,7 +2277,6 @@ obj/Release/apps/user_app/one_wire/one_wire.o
 -r=obj/Release/apps/user_app/one_wire/one_wire.o,make_one_wire,pl
 -r=obj/Release/apps/user_app/one_wire/one_wire.o,one_wire_send,pl
 -r=obj/Release/apps/user_app/one_wire/one_wire.o,one_wire_set_mode,pl
--r=obj/Release/apps/user_app/one_wire/one_wire.o,printf,l
 -r=obj/Release/apps/user_app/one_wire/one_wire.o,one_wire_set_period,pl
 -r=obj/Release/apps/user_app/one_wire/one_wire.o,stepmotor_music_minSpeed,pl
 -r=obj/Release/apps/user_app/one_wire/one_wire.o,stepmotor_music_maxSpeed,pl
@@ -2377,7 +2376,6 @@ obj/Release/apps/user_app/rf24g_key/rf24g_key.o
 -r=obj/Release/apps/user_app/rf24g_key/rf24g_key.o,colorful_light_open,l
 -r=obj/Release/apps/user_app/rf24g_key/rf24g_key.o,motor_open,l
 -r=obj/Release/apps/user_app/rf24g_key/rf24g_key.o,rf24g_28keys_event_r2c1_click_handle,pl
--r=obj/Release/apps/user_app/rf24g_key/rf24g_key.o,printf,l
 -r=obj/Release/apps/user_app/rf24g_key/rf24g_key.o,rf24g_28keys_event_r2c2_click_handle,pl
 -r=obj/Release/apps/user_app/rf24g_key/rf24g_key.o,rf24g_28keys_event_r2c3_click_handle,pl
 -r=obj/Release/apps/user_app/rf24g_key/rf24g_key.o,set_fc_effect,l

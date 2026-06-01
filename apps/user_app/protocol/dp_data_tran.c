@@ -255,16 +255,9 @@ extern TIME_CLOCK time_clock;
  */
 void zd_fb_2_app(u8 *p, u8 len)
 {
-    uint8_t fc_buffer[30]; // 发送缓存
-    // memcpy(fc_buffer, Ble_Addr, 6);
-    memcpy(fc_buffer + 6, p, len); // 跳过前6个字节的地址
-    // ble_comm_att_send_data(
-    //     ZD_HCI_handle,
-    //     ATT_CHARACTERISTIC_fff1_01_VALUE_HANDLE,
-    //     fc_buffer,
-    //     len + 6,
-    //     ATT_OP_AUTO_READ_CCC);
-    user_ble_notify_obj.param_put(fc_buffer, len + 6);
+    uint8_t fc_buffer[30];     // 发送缓存
+    memcpy(fc_buffer, p, len); //
+    user_ble_notify_obj.param_put(fc_buffer, len);
 }
 
 /*********************************************************
