@@ -52,6 +52,8 @@ void read_flash_device_status_init(void)
 #endif
         // printf("is not first power on\n");
     }
+
+    fc_effect.on_off_flag = DEVICE_ON;
 }
 
 // 写入flash时间倒计时
