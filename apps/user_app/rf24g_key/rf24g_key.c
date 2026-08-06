@@ -699,10 +699,27 @@ void rf24g_28keys_event_r3c4_click_handle(void)
 
     // 纯白色
     color_t color_structure = {0};
-    color_structure.r = 0;
-    color_structure.g = 0;
-    color_structure.b = 0;
-    color_structure.w = 0xFF;
+    // 如果之前不是静态的纯白色灯光，变成静态的纯白色灯光
+    if (!(fc_effect.Now_state == IS_STATIC &&
+          fc_effect.rgb.r == 0 &&
+          fc_effect.rgb.g == 0 &&
+          fc_effect.rgb.b == 0 &&
+          fc_effect.rgb.w == 0xFF))
+    {
+        color_structure.r = 0;
+        color_structure.g = 0;
+        color_structure.b = 0;
+        color_structure.w = 0xFF;
+    }
+    else
+    {
+        // 如果之前是静态的纯白色灯光，变成混白色灯光
+        color_structure.r = 0xFF;
+        color_structure.g = 0xFF;
+        color_structure.b = 0xFF;
+        color_structure.w = 0x00;
+    }
+
     colorful_lights_set_static_mode(color_structure);
 }
 
